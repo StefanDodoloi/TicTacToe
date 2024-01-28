@@ -40,10 +40,7 @@ function checkWinner() {
         const cellA = options[condition[0]];
         const cellB = options[condition[1]];
         const cellC = options[condition[2]];
-        if (cellA === '' || cellB === '' || cellC === '') {
-            continue;
-        }
-        if (cellA == cellB && cellB == cellC) {
+        if (cellA == cellB && cellB == cellC && cellA !== '') {
             gameEnd = true;
             break;
         }
@@ -56,4 +53,3 @@ function checkWinner() {
         currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
     }
 }
-
